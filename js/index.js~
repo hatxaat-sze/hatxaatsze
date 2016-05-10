@@ -1,0 +1,13 @@
+document.getElementById("Tantargy_Hozzaadas").addEventListener("click", function () {
+    window.location.href = "Tantargy_Hozzaadas.html";
+});
+
+document.getElementById("Sorba").addEventListener("click", function () {
+    window.location.href = "Sorba.html";
+});
+
+document.getElementById("Tetel_Hozzaadas").addEventListener("click", function () {
+    window.location.href = "Tetel_Hozzaadas.html";
+});
+
+

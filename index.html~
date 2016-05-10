@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Egyetemi segéd</title>
+	<link href="css/headers.css" rel="stylesheet" type="text/css" />
+  <link href="css/drawer.css" rel="stylesheet" type="text/css" />
+  <link href="css/lists.css" rel="stylesheet" type="text/css" />
+  <link href="css/app.css" rel="stylesheet" type="text/css" />
+    <link href="css/app_lista.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY>
+   <div>
+            <section data-type="sidebar">
+                <header>
+                    <h1>Funkciók</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li id="Tantargy_Hozzaadas"><a href="#">Tantárgy Hozzáadás</a></li>
+												<li id="Tetel_Hozzaadas"><a href="#">Tétel Hozzáadás</a></li>
+											  <li id="Sorba"><a href="#">Sorban álló tételek</a></li>
+												
+                        
+                    </ul>
+                </nav>
+            </section>
+            <section id="drawer" role="region">
+                <header>
+                    <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+                    <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+                    <h1>E-segéd</h1>
+                </header>
+                <div role="main" style="overflow:scroll">
+                <section data-type="list">
+               		<header>Tantárgyak</header>
+		              <ul id="Targy_Lista">
+		                  <li><a href="#"><p>Fülöp József</p><p>Programtervező informatikus</p></a></li>
+		              </ul>
+           		  </section>
+                </div>
+            </section>
+        </div>
+ <script src="js/index.js" type="text/javascript"></script>
+</BODY>
+</HTML>

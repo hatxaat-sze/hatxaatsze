@@ -1,0 +1,43 @@
+var IDBOpenDBRequest_AdatNyit = window.indexedDB.open("Kurzustarolo", 1);
+
+IDBOpenDBRequest_AdatNyit.onsuccess = function() {
+	console.log("Sikerült a megnyitás");
+	var IDBDatabase_DB = this.result;
+
+	var IDBTransaction_Tr1 = IDBDatabase_DB.transaction("Zhk", "readonly");
+	IDBTransaction_Tr1.oncomplete = function() {
+		console.log("Tranzakció lefutott");
+		IDBDatabase_DB.close();
+	};
+
+	var IDBObjectStore_Zhk_Tr = IDBTransaction_Tr1.objectStore("Zhk");
+	var IDBIndex_Datido_index = IDBObjectStore_Zhk_Tr.index("Dat_Ido");
+  var IDBRequest_kReq1 = IDBIndex_Datido_index.openCursor();
+	IDBRequest_kReq1.onsuccess = function(evt) {
+		console.log("Sikeres");
+		var IDBCursorwithValue_Cursor = evt.currentTarget.result;
+		if (IDBCursorwithValue_Cursor) {
+			var li = document.createElement("li");
+			li.innerHTML = "<a href='#'><p class='" + IDBCursorwithValue_Cursor.value.Id + "'>" + IDBCursorwithValue_Cursor.value.Kurzuskod + " & " + IDBCursorwithValue_Cursor.value.Fajta + "</p><p class='" + IDBCursorwithValue_Cursor.value.Id + "'>" + IDBCursorwithValue_Cursor.value.Datum + " & " +  IDBCursorwithValue_Cursor.value.Ido + "</p></a>";
+			document.getElementById("Tetel_lista").appendChild(li);
+			IDBCursorwithValue_Cursor.continue ();
+		}
+		else {
+		console.log("Sikertelen");
+		}
+			
+  };
+	IDBRequest_kReq1.onerror = function() {
+	console.log("Vége van a bejárásnak");
+  };
+}
+window.addEventListener("click", function (evt) {
+    if (evt.target.className != "") {
+        /** window.sessionStorage.setItem("Kategoria", evt.target.className); **/
+        window.location.href = "Eredmeny.html";
+    } else {
+        console.log("Nem jó helyre kattintottunk");
+    }
+});
+
+

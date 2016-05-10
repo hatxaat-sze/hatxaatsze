@@ -1,0 +1,21 @@
+{
+  "name": "E-segéd",
+  "description": "Egyetemi segédalkalmazás",
+
+  "launch_path": "/index.html",
+
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+
+  "developer": {
+    "name": "Hajdu Tamás",
+    "url": "http://www.stud.u-szeged.hu/Fulop.Jozsef.1"
+  },
+
+  "default_locale": "hu"
+		
+
+	}
+
